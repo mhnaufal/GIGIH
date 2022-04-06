@@ -1,0 +1,12 @@
+<div class="container flex align-items-center justify-content-center" style="width: 80%">
+    <div class="card-header text-center">
+      <h2 style="color: white;">Edit Post</h2>
+      <hr style="background-color: white;">
+    </div>
+    <div class="card-body">
+      <%= render "form", post: @post %>
+    </div>
+  <br>
+  <%= link_to "Show ", @post, :class => 'btn btn-info' %>
+  <%= link_to "Back ⬅", posts_path, :class => 'btn btn-warning' %>
+</div>

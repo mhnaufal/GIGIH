@@ -1,0 +1,74 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container flex align-items-center justify-content-center" style="width: 80%">
+    <div class="card-header text-center">
+      <h2 style="color: white;">List of Posts</h2>
+      <hr style="background-color: white;">
+    </div>
+    <div class="card-body">
+      <% if @posts.any? %>
+        <table class="table table-light table-hover table-striped">
+          <thead>
+            <tr>
+                <td scope="col"><b>ID</b></td>
+                <td scope="col"><b>Name</b></td>
+                <td scope="col"><b>Title</b></td>
+                <td scope="col"><b>Content</b></td>
+                <td scope="col"><b>Action</b></td>
+            </tr>
+          </thead>
+          <tbody>
+            <% @posts.each_with_index do |post, index| %>
+              <tr>
+                <td><%= index + 1 %></td>
+                <td><%= post.name %></td>
+                <td><%= post.title %></td>
+                <td><%= post.content %></td>
+                <td><%= link_to "Show 👁", post_path(post), :class => 'btn btn-info' %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <p>Post kosong</p>
+      <% end %>
+    </div>
+    <%= link_to "New post", new_post_path, :class => 'btn btn-success align-right' %>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+    </button>
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Semua Penulis</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <% if @posts.any? %>
+         <% @posts.each_with_index do |post, index| %>
+          <p>[<%= index + 1 %>] <%= post.name %></p>
+         <% end %>
+        <% else %>
+          <p class="fst-italic">Penulis kosong</p>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<!--         <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<h1>Edit <%= @item.name %> </h1>
+
+<%= form_with model: @item do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :price, placeholder: "price" %>
+  <%= form.submit %>
+<% end %>
+
+<p><%= link_to "Back", items_path %></p>

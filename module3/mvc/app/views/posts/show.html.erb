@@ -1,0 +1,42 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container flex align-items-center justify-content-center" style="width: 80%">
+    <div class="card-header text-center">
+      <h2 style="color: white;">Detail Post | <%= @post.title %></h2>
+      <hr style="background-color: white;">
+    </div>
+    <div class="card-body">
+      
+      <div class="card mb-3">
+        <div class="card-header fw-bold fs-4"><b>Author Name</b></div>
+        <div class="card-body">
+            <p class="text-dark">Name <%= @post.name %> </p>
+        </div>
+      </div>
+      
+      <div class="card mb-3">
+        <div class="card-header fw-bold fs-4"><b>Post Title</b></div>
+        <div class="card-body">
+            <p class="text-dark">Title <%= @post.title %> </p>
+        </div>
+      </div>
+      
+      <div class="card mb-3">
+        <div class="card-header fw-bold fs-4"><b>Content</b></div>
+        <div class="card-body">
+          <p class="text-dark">Content <%= @post.content %> </p>
+        </div>
+      </div>
+    </div>
+  <%= link_to "Edit 🔧", edit_post_path(@post), :class => 'btn btn-success' %>
+    <br>
+    <br>
+  <%= button_to "Delete 🗑️", @post, method: :delete, :class => 'btn btn-danger' %>
+    <br>
+  <%= link_to "Back ⬅", posts_path, :class => 'btn btn-warning' %>
+    </div>
+    <br>
+    <br>
+    <br>
+  <div>
+</div>
