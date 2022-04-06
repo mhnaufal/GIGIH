@@ -21,3 +21,9 @@ Routering, Rendering, Database
 - ERD
 
 - SQL (DDL and DML)
+
+## Module 3
+
+- Introduction to Web Framework (Ruby On Rails)
+- Introduction to MVC architecture
+- Relationship in Ruby On Rails
