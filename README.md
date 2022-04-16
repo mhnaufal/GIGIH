@@ -27,3 +27,9 @@ Routering, Rendering, Database
 - Introduction to Web Framework (Ruby On Rails)
 - Introduction to MVC architecture
 - Relationship in Ruby On Rails
+
+## Module 4
+
+- Unit Test and TDD
+- TDD for Rails Model
+- Factories and TDD for Rails Controller
