@@ -33,3 +33,7 @@ Routering, Rendering, Database
 - Unit Test and TDD
 - TDD for Rails Model
 - Factories and TDD for Rails Controller
+
+## Module 5
+
+- Clean code and Refactoring
