@@ -37,3 +37,11 @@ Routering, Rendering, Database
 ## Module 5
 
 - Clean code and Refactoring
+
+## Module 6
+
+- SOLID principles
+- SOLID not only used in OOP world, but it can be used for general programming world
+- [L] Liskov subtitution means when you change the parent, it doesn't give a bad effect for their respective children
+- [I] interface means a child class doesn't need to always inherit all method from their parent
+- [D] dependencies injection lived in the **D**
